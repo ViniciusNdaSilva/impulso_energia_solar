@@ -34,11 +34,11 @@
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="#about">Sobre Nós</a></li>
-          <li><a href="#!">Portifólio</a></li>
+          <li><a href="#nossos-servicos">Portifólio</a></li>
           <li>
             <a href="blog-grid.html">Blog<span class="new-label">Novo</span></a>
           </li>
-          <li><a href="#!">Contato</a></li>
+          <li><a href="#footer">Contato</a></li>
         </ul>
       </div>
     </div>
@@ -97,11 +97,11 @@
                 <ul>
                   <li><a href="index.html">Início</a></li>
                   <li><a href="#about">Sobre Nós</a></li>
-                  <li><a href="#!">Portifólio</a></li>
+                  <li><a href="#nossos-servicos">Portifólio</a></li>
                   <li>
                     <a href="blog-grid.html">Blog<span class="new-label">Novo</span></a>
                   </li>
-                  <li><a href="#!">Contato</a></li>
+                  <li><a href="#footer">Contato</a></li>
                 </ul>
               </nav>
               <button class="vs-menu-toggle d-inline-block d-lg-none">
@@ -110,7 +110,7 @@
             </div>
             <div class="col-auto d-none d-xl-block">
               <div class="header-btns sideMenuToggler">
-                <a href="https://api.whatsapp.com/send?phone=5541991776368" target="_blank" class="vs-btn">Simule seu Sistema</a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=5541991776368" class="vs-btn">Simule seu Sistema</a>
               </div>
             </div>
           </div>
@@ -1229,7 +1229,7 @@
   </section>
   <!--Sobre nos ok-->
 
-  <!--Card de numeros - ok-->
+  <!--Card de numeros - ok
   <div class="space-bottom">
     <div class="container">
       <div class="row gx-80 mb-1 pb-3 text-center text-xl-start justify-content-center justify-content-xl-start">
@@ -1281,7 +1281,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
   <!--Card de numeros - ok-->
 
   <!-- Nossos Portifólio ok -->
@@ -1938,59 +1938,6 @@
   </section>
   <!-- blog -->
 
-  <!-- Nossos Principais clientes -->
-  <section class="space-bottom">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-xl-5 col-xxl-4 align-self-center mb-40 mb-xl-0 text-center text-xl-start wow fadeInUp"
-          data-wow-delay="0.3s">
-          <span class="sec-subtitle">Alguns de nossos clientes</span>
-          <h2 class="sec-title mb-n2">
-            Construindo relacionamentos fortes e duradouros
-          </h2>
-        </div>
-        <div class="col-xl-7 offset-xxl-1 z-index-common wow fadeInUp" data-wow-delay="0.4s">
-          <div class="brand-wrap1">
-            <div class="shape-dotted jump"></div>
-            <div class="row gx-0">
-              <div class="col-md-6 col-lg-4">
-                <div class="brand-style1">
-                  <img src="assets/img/brand/brand-1-1.png" alt="brand" />
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="brand-style1">
-                  <img src="assets/img/brand/brand-1-2.png" alt="brand" />
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="brand-style1">
-                  <img src="assets/img/brand/brand-1-3.png" alt="brand" />
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="brand-style1">
-                  <img src="assets/img/brand/brand-1-4.png" alt="brand" />
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="brand-style1">
-                  <img src="assets/img/brand/brand-1-5.png" alt="brand" />
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="brand-style1">
-                  <img src="assets/img/brand/brand-1-6.png" alt="brand" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Nossos Principais clientes -->
-
   <!-- redes sociais-->
   <section class="bg-theme overflow-hidden">
     <div class="container">
@@ -2018,7 +1965,7 @@
   </section>
   <!-- redes sociais-->
 
-  <footer class="footer-wrapper footer-layout2" data-bg-src="assets/img/bg/footer-bg-1-1.jpg" data-overlay="custom1"
+  <footer id="footer" class="footer-wrapper footer-layout2" data-bg-src="assets/img/bg/footer-bg-1-1.jpg" data-overlay="custom1"
     data-opacity="9">
     <div class="widget-area">
       <div class="container">
@@ -2126,6 +2073,28 @@
     <!-- Seu ícone do WhatsApp aqui -->
     <a target="_blank" href="https://api.whatsapp.com/send?phone=5541991776368"><img src="assets/img/icon/icone-whats.png" alt="WhatsApp"></a>
   </div>
+  <script>
+    const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach(link => {
+link.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const target = document.querySelector(link.getAttribute('href'));
+  
+  // Obtém a altura da janela de visualização
+  const windowHeight = window.innerHeight;
+
+  // Calcula a posição de rolagem ajustada
+  const scrollPosition = target.getBoundingClientRect().top + window.scrollY - windowHeight * 0.00001;
+
+  window.scrollTo({
+    top: scrollPosition,
+    behavior: 'smooth'
+  });
+});
+});
+  </script>
   <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
   <script src="assets/js/app.min.js"></script>
   <script src="assets/js/layerslider.utils.js"></script>
