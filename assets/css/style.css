@@ -546,6 +546,7 @@ textarea.is-invalid {
 }
 .slick-track .col-auto {
   width: auto;
+  margin-right: 40px;
 }
 .slick-slide img {
   display: inline-block;
@@ -6905,9 +6906,9 @@ blockquote cite:before {
     max-width: 259px;
     margin: 10px;
     padding: 10px 6px 32px 19px;
-    z-index: 1;
   }
-  .project-slide1 .project-style1 .shape-dotted {
+
+  .project-style1 .project-slide1 .project-style1 .shape-dotted {
     display: none;
   }
 }
