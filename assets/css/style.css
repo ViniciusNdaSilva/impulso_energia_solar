@@ -6902,9 +6902,10 @@ blockquote cite:before {
     left: 0;
     bottom: auto;
     right: auto;
-    max-width: 285px;
+    max-width: 259px;
     margin: 10px;
-    padding: 22px 20px 22px 25px;
+    padding: 10px 6px 32px 19px;
+    z-index: 1;
   }
   .project-slide1 .project-style1 .shape-dotted {
     display: none;
