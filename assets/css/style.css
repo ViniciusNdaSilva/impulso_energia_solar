@@ -8637,3 +8637,7 @@ blockquote cite:before {
     transform: translateY(-10px);
   }
 }
+
+.img-logo {
+  margin: 30px;
+}
